@@ -1,1 +1,31 @@
-悬浮播放器代码
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>悬浮音乐播放器</title>
+  <meta name="keywords" content="悬浮音乐播放器" />
+  <meta name="description" content="悬浮音乐播放器">
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/caogens/AcgQPlayer@master/QPlayer.min.css">
+<script src="https://fastly.jsdelivr.net/gh/caogens/AcgQPlayer@master/QPlayer.min.js"></script>
+<script src="https://fastly.jsdelivr.net/gh/caogens/AcgQPlayer@master/meto.min.js"></script>
+<script>
+window.q = window.QPlayer;
+window.$ = q.$;
+q.isShuffle = true;
+q.isAutoplay = true;
+q.provider.meto.playlist(function (list) {
+q.list = list;
+}, '6663334940');
+$(function () {
+    q.setColor('#EE1122');
+});
+</script>
+</head>
+<body>
+<h1>悬浮音乐播放器</h1>
+</body>
+</html>
